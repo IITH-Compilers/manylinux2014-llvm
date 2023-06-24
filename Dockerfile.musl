@@ -1,7 +1,7 @@
-FROM quay.io/pypa/manylinux2014_x86_64
+FROM quay.io/pypa/musllinux_1_1_x86_64
 LABEL maintainer="Shamil K (noteness@riseup.net)"
 
-RUN yum -y install cmake wget openssl-devel
+RUN apk add cmake wget openssl-dev
 
 WORKDIR /root/cmake
 ARG CMAKE_VERSION="3.26.4"
