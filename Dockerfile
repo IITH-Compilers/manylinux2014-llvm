@@ -1,5 +1,5 @@
 FROM quay.io/pypa/manylinux2014_x86_64 as builder
-LABEL maintainer="Shamil K (noteness@riseup.net)"
+LABEL maintainer="Soumya Banerjee"
 
 RUN yum -y install cmake wget openssl-devel
 
