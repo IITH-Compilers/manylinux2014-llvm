@@ -13,8 +13,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push the Docker image with a new name
         run: |
-          # Change the image name and tag as needed
-          IMAGE_NAME="ghcr.io/Soumyaworks/manylinux2014-llvm:12-x86_64"
-          docker build . --tag $IMAGE_NAME
-          docker run $IMAGE_NAME
-          docker push $IMAGE_NAME
+          docker build . --tag ghcr.io/Soumyaworks/manylinux2014-llvm:12-x86_64
+          docker run ghcr.io/Soumyaworks/manylinux2014-llvm:12-x86_64
+          docker push ghcr.io/Soumyaworks/manylinux2014-llvm:12-x86_64
